@@ -21,6 +21,7 @@ class OfficialOverviewUnitTest {
             party,
             state,
             id)
+    private val congressPersonOverview = mock(CongresspersonOverview::class.java)
 
 
     @Test
@@ -55,27 +56,45 @@ class OfficialOverviewUnitTest {
     fun testPartyUsingSecondConstructor(){
         val expected = party
 
-        assertEquals(OfficialOverviewUnitTestBase.officialOverview2ndConstructor.party, expected)
+        `when`(congressPersonOverview.party).thenReturn("Educational")
+
+        val officialOverview = OfficialOverview(congressPersonOverview)
+
+        assertEquals(officialOverview.party, expected)
     }
 
     @Test
     fun testStateUsingSecondConstructor(){
         val expected = state
 
-        assertEquals(OfficialOverviewUnitTestBase.officialOverview2ndConstructor.state, expected)
+        `when`(congressPersonOverview.state).thenReturn("HW")
+
+        val officialOverview = OfficialOverview(congressPersonOverview)
+
+        assertEquals(officialOverview.state, expected)
     }
 
     @Test
     fun testDisplayNameUsingSecondConstructor(){
         val expected = displayName
 
-        assertEquals(OfficialOverviewUnitTestBase.officialOverview2ndConstructor.displayName, expected)
+        `when`(congressPersonOverview.firstName).thenReturn("Test")
+        `when`(congressPersonOverview.middleName).thenReturn("T")
+        `when`(congressPersonOverview.lastName).thenReturn("Testing")
+
+        val officialOverview = OfficialOverview(congressPersonOverview)
+
+        assertEquals(officialOverview.displayName, expected)
     }
 
     @Test
     fun testIdUsingSecondConstructor(){
         val expected = id
 
-        assertEquals(OfficialOverviewUnitTestBase.officialOverview2ndConstructor.id, expected)
+        `when`(congressPersonOverview.id).thenReturn("Test")
+
+        val officialOverview = OfficialOverview(congressPersonOverview)
+
+        assertEquals(officialOverview.id, expected)
     }
 }
