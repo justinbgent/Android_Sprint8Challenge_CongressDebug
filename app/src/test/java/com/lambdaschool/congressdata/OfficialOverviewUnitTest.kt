@@ -7,7 +7,7 @@ import org.mockito.Mockito.mock
 import kotlin.test.assertEquals
 
 class OfficialOverviewUnitTest {
-    //A000374 Ralph Abraham
+
     private val firstName = "Test"
     private val middleName = "T"
     private val lastName = "Testing"
