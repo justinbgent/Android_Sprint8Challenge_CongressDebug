@@ -1,8 +1,7 @@
-package com.lambdaschool.congressdata
+package com.lambdaschool.congressdata.ui
 
 import android.app.Activity
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -15,6 +14,10 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.lambdaschool.congressdata.CongresspersonProfile
+import com.lambdaschool.congressdata.vm.CongresspersonProfileViewModel
+import com.lambdaschool.congressdata.R
+import com.lambdaschool.congressdata.themeUtils
 
 class DetailsActivity : AppCompatActivity() {
 

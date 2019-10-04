@@ -1,7 +1,6 @@
-package com.lambdaschool.congressdata
+package com.lambdaschool.congressdata.ui
 
 import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
@@ -11,6 +10,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.TypedValue
 import android.widget.TextView
+import com.lambdaschool.congressdata.*
+import com.lambdaschool.congressdata.vm.CongresspersonListViewModel
 
 
 /*public class MainActivity extends LifecycleActivity  {
@@ -59,7 +60,8 @@ class MainActivity : AppCompatActivity() {
         layoutList!!.layoutManager = layoutManager
 
 
-        viewModel = ViewModelProviders.of(this).get(CongresspersonListViewModel::class.java!!)
+        //viewModel = ViewModelProviders.of(this).get(CongresspersonListViewModel::class.java!!)
+        viewModel = CongresspersonListViewModel()
 
         viewModel.overviewList?.observe(this, Observer { overviewList ->
             runOnUiThread {
