@@ -49,7 +49,8 @@ class DetailsActivity : AppCompatActivity() {
         val intent = intent
         memberId = intent.getStringExtra("id")
 
-        viewModel = ViewModelProviders.of(this).get(CongresspersonProfileViewModel::class.java)
+        //viewModel = ViewModelProviders.of(this).get(CongresspersonProfileViewModel::class.java)
+        viewModel = CongresspersonProfileViewModel(memberId)
 
         profileImage = findViewById(R.id.profile_image)
         profileName = findViewById(R.id.profile_name)
