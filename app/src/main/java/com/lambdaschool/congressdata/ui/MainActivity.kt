@@ -64,20 +64,21 @@ class MainActivity : AppCompatActivity() {
         viewModel = CongresspersonListViewModel()
 
         viewModel.overviewList?.observe(this, Observer { overviewList ->
-            runOnUiThread {
-                assert(overviewList != null)
+            assert(overviewList != null)
 
-                // using recycler view
-                overviewList?.let {
-                    listAdapter = OverviewListAdapter(overviewList)
-                    layoutList!!.adapter = listAdapter
-                }
-                // using scroll view
-                /*for (OfficialOverview officialOverview : overviewList) {
-                scrollData.addView(getDefaultTextView(officialOverview.getDisplayName(),
-                                                      officialOverview.getId()));
-            }*/
+            // using recycler view
+            overviewList?.let {
+                listAdapter = OverviewListAdapter(overviewList)
+                layoutList!!.adapter = listAdapter
             }
+//            runOnUiThread {
+//
+//                // using scroll view
+//                /*for (OfficialOverview officialOverview : overviewList) {
+//                scrollData.addView(getDefaultTextView(officialOverview.getDisplayName(),
+//                                                      officialOverview.getId()));
+//            }*/
+//            }
         })
     }
 
