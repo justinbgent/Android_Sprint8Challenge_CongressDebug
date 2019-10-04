@@ -38,10 +38,11 @@ class OfficialOverview {
     private fun buildDisplayName(): String {
         val nameBuilder = StringBuilder()
         nameBuilder.append(firstName)
+        nameBuilder.append(" ")
         if (middleName != "null") {
             nameBuilder.append(middleName).append(" ")
         }
         nameBuilder.append(lastName)
-        return nameBuilder.toString().toLowerCase()
+        return nameBuilder.toString()//.toLowerCase()
     }
 }
