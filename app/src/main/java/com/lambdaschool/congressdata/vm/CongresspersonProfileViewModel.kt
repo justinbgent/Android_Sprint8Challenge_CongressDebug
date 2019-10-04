@@ -5,7 +5,8 @@ import android.arch.lifecycle.ViewModel
 import com.lambdaschool.congressdata.CongresspersonProfile
 import com.lambdaschool.congressdata.ProfileRepository
 
-class CongresspersonProfileViewModel(var id: String?) : ViewModel() {
+class CongresspersonProfileViewModel : ViewModel() {
+    var id: String? = null
     var profile: LiveData<CongresspersonProfile>? = null
     get() {
         return if (field == null) {

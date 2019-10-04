@@ -1,6 +1,7 @@
 package com.lambdaschool.congressdata.ui
 
 import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.graphics.Typeface
@@ -60,8 +61,7 @@ class MainActivity : AppCompatActivity() {
         layoutList!!.layoutManager = layoutManager
 
 
-        //viewModel = ViewModelProviders.of(this).get(CongresspersonListViewModel::class.java!!)
-        viewModel = CongresspersonListViewModel()
+        viewModel = ViewModelProviders.of(this).get(CongresspersonListViewModel::class.java!!)
 
         viewModel.overviewList?.observe(this, Observer { overviewList ->
             assert(overviewList != null)
