@@ -1,4 +1,4 @@
-package com.lambdaschool.congressdata
+package com.lambdaschool.congressdata.ui
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -11,6 +11,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.TypedValue
 import android.widget.TextView
+import com.lambdaschool.congressdata.*
+import com.lambdaschool.congressdata.vm.CongresspersonListViewModel
 
 
 /*public class MainActivity extends LifecycleActivity  {
@@ -62,20 +64,21 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this).get(CongresspersonListViewModel::class.java!!)
 
         viewModel.overviewList?.observe(this, Observer { overviewList ->
-            runOnUiThread {
-                assert(overviewList != null)
+            assert(overviewList != null)
 
-                // using recycler view
-                overviewList?.let {
-                    listAdapter = OverviewListAdapter(overviewList)
-                    layoutList!!.adapter = listAdapter
-                }
-                // using scroll view
-                /*for (OfficialOverview officialOverview : overviewList) {
-                scrollData.addView(getDefaultTextView(officialOverview.getDisplayName(),
-                                                      officialOverview.getId()));
-            }*/
+            // using recycler view
+            overviewList?.let {
+                listAdapter = OverviewListAdapter(overviewList)
+                layoutList!!.adapter = listAdapter
             }
+//            runOnUiThread {
+//
+//                // using scroll view
+//                /*for (OfficialOverview officialOverview : overviewList) {
+//                scrollData.addView(getDefaultTextView(officialOverview.getDisplayName(),
+//                                                      officialOverview.getId()));
+//            }*/
+//            }
         })
     }
 

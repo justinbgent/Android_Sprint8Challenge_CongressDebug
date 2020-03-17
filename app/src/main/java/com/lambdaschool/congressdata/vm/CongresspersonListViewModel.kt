@@ -1,7 +1,9 @@
-package com.lambdaschool.congressdata
+package com.lambdaschool.congressdata.vm
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.ViewModel
+import com.lambdaschool.congressdata.OfficialOverview
+import com.lambdaschool.congressdata.OverviewListRepository
 
 import java.util.ArrayList
 

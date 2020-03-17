@@ -1,4 +1,4 @@
-package com.lambdaschool.congressdata
+package com.lambdaschool.congressdata.ui
 
 import android.app.Activity
 import android.arch.lifecycle.Observer
@@ -15,6 +15,10 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import com.lambdaschool.congressdata.CongresspersonProfile
+import com.lambdaschool.congressdata.vm.CongresspersonProfileViewModel
+import com.lambdaschool.congressdata.R
+import com.lambdaschool.congressdata.themeUtils
 
 class DetailsActivity : AppCompatActivity() {
 
@@ -50,6 +54,7 @@ class DetailsActivity : AppCompatActivity() {
         memberId = intent.getStringExtra("id")
 
         viewModel = ViewModelProviders.of(this).get(CongresspersonProfileViewModel::class.java)
+//        viewModel = CongresspersonProfileViewModel(memberId)
 
         profileImage = findViewById(R.id.profile_image)
         profileName = findViewById(R.id.profile_name)
